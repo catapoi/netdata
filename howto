@@ -40,3 +40,31 @@ The stable version of Node.js bundled with the system package manager is fine fo
 Netdata's internal web server.
 
 	sudo ufw allow 19999/tcp
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Create test Env 
+
+1. LXC containers
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-and-use-lxd-on-ubuntu-16-04
+
+2. Docker containers
+
+https://docs.docker.com/get-started/
+
+3. Kubernetes
+
+https://kubernetes.io/docs/tasks/tools/install-minikube/
+
+https://kubernetes.io/docs/getting-started-guides/minikube/
+kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Create notification mechanism
+
+
+https://github.com/firehol/netdata/wiki/email-notifications
+
