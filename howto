@@ -1,0 +1,42 @@
+========================================================================================================
+
+			NETDATA SETUP
+
+========================================================================================================
+
+	Get system up-to-date
+
+	sudo apt-get update
+
+
+	Next, install Netdata's dependencies, which include the gcc (a C compiler), GNU Autoconf tools, GUID management,
+and compression libraries for Netdata's internal web server.
+
+
+	sudo apt-get install zlib1g-dev uuid-dev libmnl-dev gcc make autoconf autoconf-archive autogen automake pkg-config curl
+
+
+
+	The next set of packages are optional but recommended by Netdata, and include Python, some Python packages, and Node.JS.
+The stable version of Node.js bundled with the system package manager is fine for Netdata's requirements. Install these next.
+
+
+	sudo apt-get install python python-yaml python-mysqldb python-psycopg2 nodejs lm-sensors netcat
+
+
+	To install Netdata itself, we must use the project's GitHub repository. Clone the Netdata repository into your home directory.
+
+
+	git clone https://github.com/firehol/netdata.git --depth=1 ~/netdata
+
+	Move to the newly cloned directory.
+
+	cd ~/netdata
+
+	sudo ./netdata-installer.sh
+
+
+	If you have UFW enabled, as detailed in the Initial Server Setup for Ubuntu 16.04 tutorial, you'll need to open port 19999 for
+Netdata's internal web server.
+
+	sudo ufw allow 19999/tcp
